@@ -55,3 +55,26 @@ body{
 
     gap:25px;
 }
+
+.hero-content{
+
+    max-width:700px;
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    font-size:1.1rem;
+
+    color:var(--text-secondary);
+
+    margin-bottom:30px;
+}

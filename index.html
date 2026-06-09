@@ -14,9 +14,6 @@
 
 <body>
 
-    <!-- Background Effects -->
-    <div class="bg-blur"></div>
-
     <!-- Navbar -->
     <header class="navbar">
 
@@ -25,17 +22,23 @@
         </div>
 
         <nav>
+
             <a href="#">Dashboard</a>
-            <a href="#">Features</a>
-            <a href="#">Security</a>
+
+            <a href="#">Security Guide</a>
+
+            <a href="#">Github</a>
+
             <button id="themeToggle">
                 🌙
             </button>
+
         </nav>
 
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
+
     <section class="hero">
 
         <div class="hero-content">
@@ -45,11 +48,10 @@
             </h1>
 
             <p>
-                Generate, analyze and secure passwords
-                with advanced intelligence.
+                Secure your digital identity with advanced password intelligence.
             </p>
 
-            <button class="btn-primary">
+            <button>
                 Launch Studio
             </button>
 
@@ -58,8 +60,10 @@
     </section>
 
     <!-- Dashboard -->
+
     <main class="dashboard-grid">
 
+        <!-- Password Output -->
 
         <section class="card password-card">
 
@@ -69,20 +73,59 @@
 
             <div class="password-output">
 
-                <input type="text" readonly id="passwordOutput">
+                <input type="text" value="A#7Lm@9QxP2" readonly id="passwordOutput">
 
-                <button id="copyBtn">
-                    Copy
-                </button>
+                <div class="action-buttons">
 
-                <button id="regenerateBtn">
-                    Regenerate
-                </button>
+                    <button id="copyBtn">
+                        Copy
+                    </button>
+
+                    <button id="regenerateBtn">
+                        Regenerate
+                    </button>
+
+                </div>
 
             </div>
 
         </section>
 
+        <!-- Strength Analytics -->
+
+        <section class="card strength-card">
+
+            <h2>
+                Password Strength
+            </h2>
+
+            <div class="strength-bar">
+
+                <div class="strength-fill">
+
+                </div>
+
+            </div>
+
+            <h3>
+                Strong
+            </h3>
+
+            <div class="metrics">
+
+                <div>
+                    Entropy: 92
+                </div>
+
+                <div>
+                    Score: 95%
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Generator Settings -->
 
         <section class="card settings-card">
 
@@ -90,15 +133,7 @@
                 Generator Settings
             </h2>
 
-            <label>
-                Length
-            </label>
-
-            <input type="range" min="8" max="50" value="16" id="lengthSlider">
-
-            <span id="lengthValue">
-                16
-            </span>
+            <input type="range" min="8" max="50" value="16">
 
             <div class="options">
 
@@ -124,60 +159,13 @@
 
             </div>
 
-            <button id="generateBtn" class="btn-primary">
+            <button>
                 Generate Password
             </button>
 
         </section>
 
-
-        <section class="card strength-card">
-
-            <h2>
-                Password Strength
-            </h2>
-
-            <div class="strength-bar">
-
-                <div class="strength-fill">
-
-                </div>
-
-            </div>
-
-            <h3 id="strengthText">
-                Strong
-            </h3>
-
-            <div class="metrics">
-
-                <div>
-                    Entropy: 95
-                </div>
-
-                <div>
-                    Score: 92%
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="card crack-card">
-
-            <h2>
-                Estimated Crack Time
-            </h2>
-
-            <div id="crackTime">
-
-                12 Million Years
-
-            </div>
-
-        </section>
-
+        <!-- Security Checklist -->
 
         <section class="card checklist-card">
 
@@ -187,30 +175,21 @@
 
             <ul>
 
-                <li>
-                    ✓ Uppercase
-                </li>
+                <li>✓ Uppercase</li>
 
-                <li>
-                    ✓ Lowercase
-                </li>
+                <li>✓ Lowercase</li>
 
-                <li>
-                    ✓ Numbers
-                </li>
+                <li>✓ Numbers</li>
 
-                <li>
-                    ✓ Symbols
-                </li>
+                <li>✓ Symbols</li>
 
-                <li>
-                    ✓ 12+ Characters
-                </li>
+                <li>✓ 12+ Characters</li>
 
             </ul>
 
         </section>
 
+        <!-- Breach Checker -->
 
         <section class="card breach-card">
 
@@ -218,20 +197,21 @@
                 Password Breach Checker
             </h2>
 
-            <input type="password" id="breachInput" placeholder="Enter password">
+            <input type="password" placeholder="Enter password">
 
-            <button id="checkBreachBtn" class="btn-primary">
-
+            <button>
                 Check Security
-
             </button>
 
-            <div id="breachResult">
+            <div class="safe-result">
+
+                ✓ No Breach Detected
 
             </div>
 
         </section>
 
+        <!-- Password History -->
 
         <section class="card history-card">
 
@@ -239,12 +219,21 @@
                 Password History
             </h2>
 
-            <div id="historyList">
+            <div class="history-item">
+                *************
+            </div>
 
+            <div class="history-item">
+                *************
+            </div>
+
+            <div class="history-item">
+                *************
             </div>
 
         </section>
 
+        <!-- Security Tips -->
 
         <section class="card tips-card">
 
@@ -252,19 +241,12 @@
                 Security Tip
             </h2>
 
-            <p id="tipText">
-
-                Use unique passwords for every account.
-
+            <p>
+                Never reuse passwords across multiple accounts.
             </p>
 
         </section>
 
     </main>
-
-    <!-- Footer -->
-    <footer>
-        Footer
-    </footer>
 
 </body>
