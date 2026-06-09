@@ -13,6 +13,43 @@ document.addEventListener(
             "generateBtn"
         );
 
+    const copyBtn =
+        document.getElementById(
+            "copyBtn"
+        );
+
+    const toast =
+        document.querySelector(
+            ".toast"
+        );
+
+    copyBtn?.addEventListener(
+    "click",
+    ()=>{
+
+        navigator.clipboard.writeText(
+
+            document.getElementById(
+                "passwordOutput"
+            ).value
+
+        );
+
+        toast.style.display = "block";
+
+        addActivityLog(
+            "Password Copied"
+        );
+
+        setTimeout(()=>{
+
+            toast.style.display =
+                "none";
+
+        },2000);
+
+    });
+
     const slider =
         document.getElementById(
             "lengthSlider"
@@ -47,6 +84,18 @@ document.addEventListener(
             estimateCrackTime(password);
 
         saveHistory(password);
+
+        addActivityLog(
+            "Password Generated"
+        );
+
+        updateSecurityChecklist(
+            password
+        );
+
+        updateBreachStatus(
+            password
+        );
 
     });
 

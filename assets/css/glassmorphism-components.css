@@ -227,3 +227,38 @@ nav a {
 
     font-weight:600;
 }
+
+.activity-item{
+
+    padding:12px;
+
+    margin-top:10px;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    display:flex;
+
+    justify-content:space-between;
+}
+
+select{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:white;
+
+    border:
+        1px solid rgba(255,255,255,.15);
+}

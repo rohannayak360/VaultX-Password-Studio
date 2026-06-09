@@ -31,10 +31,29 @@ function generatePassword() {
     const symbol =
         document.getElementById("symbols").checked;
 
+    const mode =
+    document.getElementById(
+        "passwordMode"
+    ).value;
+
     if (upper) characters += uppercase;
     if (lower) characters += lowercase;
     if (number) characters += numbers;
     if (symbol) characters += symbols;
+
+    if(mode === "banking"){
+
+        characters +=
+        "!@#$%^&*()";
+
+    }
+
+    if(mode === "gaming"){
+
+        characters +=
+        "GHOSTHUNTER";
+
+    }
 
     let password = "";
 

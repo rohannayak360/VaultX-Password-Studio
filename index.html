@@ -173,7 +173,27 @@
 
             </div>
 
-            <button>
+            <select id="passwordMode">
+
+                <option value="personal">
+                    Personal
+                </option>
+
+                <option value="professional">
+                    Professional
+                </option>
+
+                <option value="banking">
+                    Banking
+                </option>
+
+                <option value="gaming">
+                    Gaming
+                </option>
+
+            </select>
+
+            <button id="generateBtn" class="btn-primary">
                 Generate Password
             </button>
 
@@ -187,17 +207,27 @@
                 Security Checklist
             </h2>
 
-            <ul>
+           <ul>
 
-                <li>✓ Uppercase</li>
+                <li id="check-uppercase">
+                    ❌ Uppercase
+                </li>
 
-                <li>✓ Lowercase</li>
+                <li id="check-lowercase">
+                    ❌ Lowercase
+                </li>
 
-                <li>✓ Numbers</li>
+                <li id="check-numbers">
+                    ❌ Numbers
+                </li>
 
-                <li>✓ Symbols</li>
+                <li id="check-symbols">
+                    ❌ Symbols
+                </li>
 
-                <li>✓ 12+ Characters</li>
+                <li id="check-length">
+                    ❌ 12+ Characters
+                </li>
 
             </ul>
 
@@ -253,6 +283,20 @@
 
         </section>
 
+        <!-- Activity Timeline -->
+
+        <section class="card activity-card">
+
+            <h2>
+                Activity Timeline
+            </h2>
+
+            <div id="activityLog">
+
+            </div>
+
+        </section>
+
         <!-- Security Tips -->
 
         <section class="card tips-card">
@@ -282,6 +326,8 @@
     <script src="assets/js/password-breach-checker.js"></script>
     <script src="assets/js/security-tips-engine.js"></script>
     <script src="assets/js/theme-controller.js"></script>
+    <script src="assets/js/security-checklist-engine.js"></script>
+    <script src="assets/js/activity-log-engine.js"></script>
     <script src="assets/js/vaultx-app.js"></script>
 </body>
 
