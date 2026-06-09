@@ -3,18 +3,39 @@
 .card{
 
     transition:
-        0.3s ease;
+        all .35s ease;
 }
 
 .card:hover{
 
     transform:
-        translateY(-5px);
+        translateY(-8px);
+
+    border-color:
+        rgba(99,102,241,.4);
+}
+.card:hover::before{
+
+    left:100%;
+
+    transition:1s;
 }
 
 /* Button Hover */
+button{
+
+    transition:
+        all .3s ease;
+}
+
 button:hover{
 
     transform:
-        scale(1.05);
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(99,102,241,.4);
 }
+
+

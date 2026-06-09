@@ -70,11 +70,18 @@ body{
     margin-bottom:20px;
 }
 
-.hero p{
+.hero{
 
-    font-size:1.1rem;
+    min-height:60vh;
 
-    color:var(--text-secondary);
+    display:flex;
 
-    margin-bottom:30px;
+    align-items:center;
+}
+
+.hero h1{
+
+    text-shadow:
+        0 0 30px
+        rgba(99,102,241,.35);
 }
