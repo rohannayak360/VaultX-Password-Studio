@@ -1,19 +1,51 @@
 // Main controller
 
-const copyBtn =
-document.getElementById("copyBtn");
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
 
-const toast =
-document.querySelector(".toast");
+    renderHistory();
 
-copyBtn.addEventListener("click",()=>{
+    const generateBtn =
+        document.getElementById(
+            "generateBtn"
+        );
 
-    toast.style.display="block";
+    const slider =
+        document.getElementById(
+            "lengthSlider"
+        );
 
-    setTimeout(()=>{
+    const lengthValue =
+        document.getElementById(
+            "lengthValue"
+        );
 
-        toast.style.display="none";
+    slider.addEventListener(
+    "input",
+    ()=>{
 
-    },2000);
+        lengthValue.textContent =
+            slider.value;
+
+    });
+
+    generateBtn.addEventListener(
+    "click",
+    ()=>{
+
+        const password =
+            generatePassword();
+
+        updateStrength(password);
+
+        document.getElementById(
+            "crackTime"
+        ).textContent =
+            estimateCrackTime(password);
+
+        saveHistory(password);
+
+    });
 
 });

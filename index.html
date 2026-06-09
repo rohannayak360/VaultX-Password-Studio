@@ -143,27 +143,31 @@
                 Generator Settings
             </h2>
 
-            <input type="range" min="8" max="50" value="16">
+            <input type="range" id="lengthSlider" min="8" max="50" value="16">
+
+            <span id="lengthValue">
+                16
+            </span>
 
             <div class="options">
 
                 <label>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="uppercase" checked>
                     Uppercase
                 </label>
 
                 <label>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="lowercase" checked>
                     Lowercase
                 </label>
 
                 <label>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="numbers" checked>
                     Numbers
                 </label>
 
                 <label>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="symbols" checked>
                     Symbols
                 </label>
 
@@ -196,6 +200,22 @@
                 <li>✓ 12+ Characters</li>
 
             </ul>
+
+        </section>
+
+        <!-- Crack Time -->
+
+        <section class="card crack-card">
+
+            <h2>
+                Estimated Crack Time
+            </h2>
+
+            <div id="crackTime">
+
+                12 Million Years
+
+            </div>
 
         </section>
 
@@ -261,9 +281,15 @@
 
     <div class="toast">
 
-    Password Copied Successfully
+        Password Copied Successfully
 
     </div>
+
+    <script src="assets/js/password-generator-engine.js"></script>
+    <script src="assets/js/password-strength-analyzer.js"></script>
+    <script src="assets/js/crack-time-estimator.js"></script>
+    <script src="assets/js/password-history-manager.js"></script>
+    <script src="assets/js/vaultx-app.js"></script>
 </body>
 
 <div class="bg-orb orb-1"></div>
