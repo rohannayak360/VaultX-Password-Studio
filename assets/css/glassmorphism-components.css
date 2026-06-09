@@ -1,1 +1,65 @@
 /* Cards, buttons, inputs */
+
+.card{
+
+    background:
+        rgba(255,255,255,0.08);
+
+    backdrop-filter:
+        blur(20px);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius:
+        24px;
+
+    padding:25px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.35);
+}
+
+/* Button Style */
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:12px;
+
+    padding:12px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    color:white;
+
+    font-weight:600;
+}
+
+/* Input Style */
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    background:
+        rgba(255,255,255,0.05);
+
+    color:white;
+}

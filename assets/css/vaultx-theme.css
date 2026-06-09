@@ -1,1 +1,69 @@
 /* Colors, fonts, CSS variables */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+
+    /* Primary Colors */
+
+    --primary-color: #6366f1;
+    --secondary-color: #8b5cf6;
+    --accent-color: #06b6d4;
+
+    /* Background */
+
+    --bg-dark: #0f172a;
+    --bg-card: rgba(255,255,255,0.08);
+
+    /* Text */
+
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+
+    /* Success */
+
+    --success-color: #22c55e;
+
+    /* Warning */
+
+    --warning-color: #f59e0b;
+
+    /* Danger */
+
+    --danger-color: #ef4444;
+
+    /* Border */
+
+    --glass-border: rgba(255,255,255,0.15);
+
+    /* Shadow */
+
+    --glass-shadow:
+        0 8px 32px rgba(0,0,0,0.35);
+
+    /* Radius */
+
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 12px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg-dark);
+
+    color:var(--text-primary);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+}

@@ -1,1 +1,20 @@
 /* Hover effects, loaders, transitions */
+
+.card{
+
+    transition:
+        0.3s ease;
+}
+
+.card:hover{
+
+    transform:
+        translateY(-5px);
+}
+
+/* Button Hover */
+button:hover{
+
+    transform:
+        scale(1.05);
+}
