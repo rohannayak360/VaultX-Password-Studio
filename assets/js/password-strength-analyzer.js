@@ -67,4 +67,30 @@ function updateStrength(password){
             "Military Grade";
 
     }
+
+    const entropy =
+        calculateEntropy(password);
+
+    document.querySelector(
+        ".metrics"
+    ).innerHTML =
+    `
+    <div>
+    Entropy: ${entropy}
+    </div>
+
+    <div>
+    Score: ${score}%
+    </div>
+    `;
+}
+
+function calculateEntropy(password){
+
+    const charset = 94;
+
+    return Math.round(
+        password.length *
+        Math.log2(charset)
+    );
 }

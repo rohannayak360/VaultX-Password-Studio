@@ -6,6 +6,8 @@ document.addEventListener(
 
     renderHistory();
 
+    loadRandomTip();
+
     const generateBtn =
         document.getElementById(
             "generateBtn"
@@ -45,6 +47,26 @@ document.addEventListener(
             estimateCrackTime(password);
 
         saveHistory(password);
+
+    });
+
+    const breachBtn =
+    document.getElementById(
+        "checkBreachBtn"
+    );
+
+    const breachInput =
+    document.getElementById(
+        "breachInput"
+    );
+
+    breachBtn?.addEventListener(
+    "click",
+    ()=>{
+
+        updateBreachStatus(
+            breachInput.value
+        );
 
     });
 

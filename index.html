@@ -227,15 +227,13 @@
                 Password Breach Checker
             </h2>
 
-            <input type="password" placeholder="Enter password">
+            <input type="password" id="breachInput" placeholder="Enter password">
 
-            <button>
+            <button id="checkBreachBtn">
                 Check Security
             </button>
 
-            <div class="safe-result">
-
-                ✓ No Breach Detected
+            <div id="breachResult">
 
             </div>
 
@@ -249,16 +247,8 @@
                 Password History
             </h2>
 
-            <div class="history-item">
-                *************
-            </div>
+            <div id="historyList">
 
-            <div class="history-item">
-                *************
-            </div>
-
-            <div class="history-item">
-                *************
             </div>
 
         </section>
@@ -271,8 +261,8 @@
                 Security Tip
             </h2>
 
-            <p>
-                Never reuse passwords across multiple accounts.
+            <p id="tipText">
+
             </p>
 
         </section>
@@ -289,6 +279,9 @@
     <script src="assets/js/password-strength-analyzer.js"></script>
     <script src="assets/js/crack-time-estimator.js"></script>
     <script src="assets/js/password-history-manager.js"></script>
+    <script src="assets/js/password-breach-checker.js"></script>
+    <script src="assets/js/security-tips-engine.js"></script>
+    <script src="assets/js/theme-controller.js"></script>
     <script src="assets/js/vaultx-app.js"></script>
 </body>
 

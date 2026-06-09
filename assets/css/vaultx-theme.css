@@ -121,3 +121,14 @@ body{
 
     opacity:.20;
 }
+
+.light-theme{
+
+    --bg-dark:#f8fafc;
+
+    --text-primary:#0f172a;
+
+    --text-secondary:#475569;
+
+    background:#f8fafc;
+}
