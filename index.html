@@ -1,336 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <link rel="stylesheet" href="assets/css/vaultx-theme.css">
-
-    <link rel="stylesheet" href="assets/css/dashboard-layout.css">
-
-    <link rel="stylesheet" href="assets/css/glassmorphism-components.css">
-
-    <link rel="stylesheet" href="assets/css/animations.css">
-
-    <link rel="stylesheet" href="assets/css/responsive-design.css">
-
-    <link rel="stylesheet" href="assets/css/toast-notifications.css">
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>VaultX Password Studio — Military-Grade Password Security</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">🛡️</div>
+    VaultX
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#modes">Modes</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="login.html" class="btn-ghost">Sign in</a>
+    <a href="studio.html" class="btn-primary">Launch Studio →</a>
+  </div>
+</nav>
 
-        <div class="logo">
-            🛡 VaultX
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Military-Grade Security
+      </div>
+      <h1 class="hero-title">
+        Passwords that<br/>
+        <span class="highlight">hackers can't crack</span>
+      </h1>
+      <p class="hero-subtitle">
+        VaultX combines AI-powered generation, breach detection, entropy analysis, and crack-time estimation into one security studio. Your digital identity, protected.
+      </p>
+      <div class="hero-actions">
+        <a href="studio.html" class="btn-primary btn-primary-lg">⚡ Launch Studio — Free</a>
+        <a href="#how" class="btn-outline-lg">See how it works</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-val">128+</div>
+          <div class="hero-stat-label">Passwords Generated</div>
         </div>
-
-        <nav>
-
-            <a href="#">Dashboard</a>
-
-            <a href="#">Security Guide</a>
-
-            <a href="#">Github</a>
-
-            <button id="themeToggle">
-                🌙
-            </button>
-
-        </nav>
-
-    </header>
-
-    <!-- Hero -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <h1>
-                Generate Military-Grade Passwords
-            </h1>
-
-            <p>
-                Secure your digital identity with advanced password intelligence.
-            </p>
-
-            <button class="btn-primary">
-                Launch Studio
-            </button>
-
-            <div class="security-score">
-
-                Security Score
-
-                <span>96/100</span>
-
-            </div>
-
+        <div>
+          <div class="hero-stat-val">99.9%</div>
+          <div class="hero-stat-label">Breach Detection Rate</div>
         </div>
-
-    </section>
-
-    <!-- Dashboard -->
-
-    <main class="dashboard-grid">
-
-        <!-- Password Output -->
-
-        <section class="card password-card">
-
-            <h2>
-                Generated Password
-            </h2>
-
-            <div class="password-output">
-
-                <input type="text" value="A#7Lm@9QxP2" readonly id="passwordOutput">
-
-                <div class="action-buttons">
-
-                    <button id="copyBtn">
-                        Copy
-                    </button>
-
-                    <button id="regenerateBtn">
-                        Regenerate
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Strength Analytics -->
-
-        <section class="card strength-card">
-
-            <h2>
-                Password Strength
-            </h2>
-
-            <div class="strength-bar">
-
-                <div class="strength-fill">
-
-                </div>
-
-            </div>
-
-            <h3>
-                Strong
-            </h3>
-
-            <div class="metrics">
-
-                <div>
-                    Entropy: 92
-                </div>
-
-                <div>
-                    Score: 95%
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Generator Settings -->
-
-        <section class="card settings-card">
-
-            <h2>
-                Generator Settings
-            </h2>
-
-            <input type="range" id="lengthSlider" min="8" max="50" value="16">
-
-            <span id="lengthValue">
-                16
-            </span>
-
-            <div class="options">
-
-                <label>
-                    <input type="checkbox" id="uppercase" checked>
-                    Uppercase
-                </label>
-
-                <label>
-                    <input type="checkbox" id="lowercase" checked>
-                    Lowercase
-                </label>
-
-                <label>
-                    <input type="checkbox" id="numbers" checked>
-                    Numbers
-                </label>
-
-                <label>
-                    <input type="checkbox" id="symbols" checked>
-                    Symbols
-                </label>
-
-            </div>
-
-            <select id="passwordMode">
-
-                <option value="personal">
-                    Personal
-                </option>
-
-                <option value="professional">
-                    Professional
-                </option>
-
-                <option value="banking">
-                    Banking
-                </option>
-
-                <option value="gaming">
-                    Gaming
-                </option>
-
-            </select>
-
-            <button id="generateBtn" class="btn-primary">
-                Generate Password
-            </button>
-
-        </section>
-
-        <!-- Security Checklist -->
-
-        <section class="card checklist-card">
-
-            <h2>
-                Security Checklist
-            </h2>
-
-           <ul>
-
-                <li id="check-uppercase">
-                    ❌ Uppercase
-                </li>
-
-                <li id="check-lowercase">
-                    ❌ Lowercase
-                </li>
-
-                <li id="check-numbers">
-                    ❌ Numbers
-                </li>
-
-                <li id="check-symbols">
-                    ❌ Symbols
-                </li>
-
-                <li id="check-length">
-                    ❌ 12+ Characters
-                </li>
-
-            </ul>
-
-        </section>
-
-        <!-- Crack Time -->
-
-        <section class="card crack-card">
-
-            <h2>
-                Estimated Crack Time
-            </h2>
-
-            <div id="crackTime">
-
-                12 Million Years
-
-            </div>
-
-        </section>
-
-        <!-- Breach Checker -->
-
-        <section class="card breach-card">
-
-            <h2>
-                Password Breach Checker
-            </h2>
-
-            <input type="password" id="breachInput" placeholder="Enter password">
-
-            <button id="checkBreachBtn">
-                Check Security
-            </button>
-
-            <div id="breachResult">
-
-            </div>
-
-        </section>
-
-        <!-- Password History -->
-
-        <section class="card history-card">
-
-            <h2>
-                Password History
-            </h2>
-
-            <div id="historyList">
-
-            </div>
-
-        </section>
-
-        <!-- Activity Timeline -->
-
-        <section class="card activity-card">
-
-            <h2>
-                Activity Timeline
-            </h2>
-
-            <div id="activityLog">
-
-            </div>
-
-        </section>
-
-        <!-- Security Tips -->
-
-        <section class="card tips-card">
-
-            <h2>
-                Security Tip
-            </h2>
-
-            <p id="tipText">
-
-            </p>
-
-        </section>
-
-    </main>
-
-    <div class="toast">
-
-        Password Copied Successfully
-
+        <div>
+          <div class="hero-stat-val">12M</div>
+          <div class="hero-stat-label">Years to Crack</div>
+        </div>
+      </div>
     </div>
+    <div class="hero-visual">
+      <div class="hero-card-main">
+        <div class="hero-card-header">
+          <span class="hero-card-label">Generated Password</span>
+          <div class="status-badge"><div class="status-dot"></div> Secure</div>
+        </div>
+        <div class="password-display">
+          <span>R!8kL#4zW@7mP</span>
+          <button class="copy-btn">COPY</button>
+        </div>
+        <div class="strength-bar-wrap">
+          <div class="strength-bar-labels">
+            <span>Password Strength</span>
+            <span class="strength-val">Military Grade</span>
+          </div>
+          <div class="strength-track">
+            <div class="strength-fill"></div>
+          </div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-pill">
+            <div class="metric-pill-label">Entropy Score</div>
+            <div class="metric-pill-val accent">92 bits</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-pill-label">Security Score</div>
+            <div class="metric-pill-val green">95 / 100</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-pill-label">Crack Time</div>
+            <div class="metric-pill-val primary">12M Years</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-pill-label">Risk Level</div>
+            <div class="metric-pill-val green">Low Risk</div>
+          </div>
+        </div>
+        <div class="checklist">
+          <span class="check-item">✓ Uppercase</span>
+          <span class="check-item">✓ Lowercase</span>
+          <span class="check-item">✓ Numbers</span>
+          <span class="check-item">✓ Symbols</span>
+          <span class="check-item">✓ 12+ Chars</span>
+        </div>
+      </div>
+      <div class="float-card float-card-1">
+        <div class="float-card-title">Breach Status</div>
+        <div class="float-card-val green">✓ Clean</div>
+      </div>
+      <div class="float-card float-card-2">
+        <div class="float-card-title">Next Expiry</div>
+        <div class="float-card-val accent">Sep 08</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="assets/js/password-generator-engine.js"></script>
-    <script src="assets/js/password-strength-analyzer.js"></script>
-    <script src="assets/js/crack-time-estimator.js"></script>
-    <script src="assets/js/password-history-manager.js"></script>
-    <script src="assets/js/password-breach-checker.js"></script>
-    <script src="assets/js/security-tips-engine.js"></script>
-    <script src="assets/js/theme-controller.js"></script>
-    <script src="assets/js/security-checklist-engine.js"></script>
-    <script src="assets/js/activity-log-engine.js"></script>
-    <script src="assets/js/vaultx-app.js"></script>
+<!-- ─── STATS BANNER ─── -->
+<div class="stats-banner">
+  <div class="section-inner">
+    <div class="stats-row reveal">
+      <div class="stat-block">
+        <span class="stat-num"><span class="green">128</span></span>
+        <div class="stat-label">Passwords Generated</div>
+      </div>
+      <div class="stat-block">
+        <span class="stat-num"><span class="accent">64</span></span>
+        <div class="stat-label">Security Checks Run</div>
+      </div>
+      <div class="stat-block">
+        <span class="stat-num"><span class="primary">92%</span></span>
+        <div class="stat-label">Average Strength Score</div>
+      </div>
+      <div class="stat-block">
+        <span class="stat-num"><span class="stat-num" style="color:var(--yellow)">12</span></span>
+        <div class="stat-label">Breaches Detected</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FEATURES ─── -->
+<section id="features" class="features">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">What's inside</div>
+      <h2 class="section-title">Everything your<br/>passwords need</h2>
+      <p class="section-desc">One studio for generation, analysis, breach checking, and monitoring. No separate tools required.</p>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(99,130,255,0.1);">⚡</div>
+        <div class="feature-title">Smart Password Generator</div>
+        <p class="feature-desc">Generate cryptographically secure passwords with 4 specialized modes — Personal, Professional, Banking, and Gaming.</p>
+        <span class="feature-tag">CORE</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(0,229,255,0.1);">📊</div>
+        <div class="feature-title">Entropy & Strength Analysis</div>
+        <p class="feature-desc">Real-time entropy calculation and security scoring. Know exactly how strong your password is in bits and as a score.</p>
+        <span class="feature-tag">ANALYSIS</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(0,214,143,0.1);">⏱️</div>
+        <div class="feature-title">Crack Time Estimator</div>
+        <p class="feature-desc">Predicts how long a brute-force attack would take — from 2 minutes to 12 million years based on complexity.</p>
+        <span class="feature-tag">INTELLIGENCE</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(255,71,87,0.1);">🔍</div>
+        <div class="feature-title">Breach Detection</div>
+        <p class="feature-desc">Check if your password has appeared in known data breaches using the Have I Been Pwned database.</p>
+        <span class="feature-tag">SAFETY</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(255,184,0,0.1);">📋</div>
+        <div class="feature-title">Password History</div>
+        <p class="feature-desc">Track all generated passwords locally. View, copy, delete, or sync to your account with breach status for each.</p>
+        <span class="feature-tag">MANAGEMENT</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(124,58,237,0.1);">📅</div>
+        <div class="feature-title">Expiry Tracker</div>
+        <p class="feature-desc">Know when to change passwords. VaultX calculates the optimal rotation schedule based on your security profile.</p>
+        <span class="feature-tag">TRACKING</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section id="how" class="how">
+  <div class="section-inner">
+    <div class="section-header reveal" style="text-align:center; display:flex; flex-direction:column; align-items:center;">
+      <div class="section-eyebrow">How it works</div>
+      <h2 class="section-title">From zero to secure<br/>in 4 steps</h2>
+      <p class="section-desc" style="text-align:center;">No setup. No account required to start. Open the studio and get a military-grade password in seconds.</p>
+    </div>
+    <div class="how-steps reveal">
+      <div class="how-step">
+        <span class="how-step-num">01</span>
+        <div class="how-step-icon">⚙️</div>
+        <div class="how-step-title">Configure</div>
+        <p class="how-step-desc">Set your length, character types, and pick a generation mode suited to your use case.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-step-num">02</span>
+        <div class="how-step-icon">⚡</div>
+        <div class="how-step-title">Generate</div>
+        <p class="how-step-desc">Hit Generate. VaultX creates a cryptographically random password matching your criteria.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-step-num">03</span>
+        <div class="how-step-icon">🔬</div>
+        <div class="how-step-title">Analyze</div>
+        <p class="how-step-desc">Instantly see entropy, security score, crack time, and a 5-point compliance checklist.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-step-num">04</span>
+        <div class="how-step-icon">✅</div>
+        <div class="how-step-title">Verify & Use</div>
+        <p class="how-step-desc">Run a breach check, confirm it's clean, copy and deploy with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECURITY SHOWCASE ─── -->
+<section class="showcase">
+  <div class="section-inner">
+    <div class="showcase-inner reveal">
+      <div class="showcase-visual">
+        <div class="showcase-card">
+          <div class="sc-label">Security Score</div>
+          <div class="sc-val green">95<span style="font-size:1rem;color:var(--text-muted)">/100</span></div>
+          <div class="sc-meter"><div class="sc-meter-fill" style="width:95%"></div></div>
+          <div class="sc-sub">Military Grade</div>
+        </div>
+        <div class="showcase-card">
+          <div class="sc-label">Crack Time</div>
+          <div class="sc-val accent">12M</div>
+          <div class="sc-sub">Years estimated</div>
+        </div>
+        <div class="showcase-card">
+          <div class="sc-label">Entropy</div>
+          <div class="sc-val primary">92</div>
+          <div class="sc-sub">bits of randomness</div>
+        </div>
+        <div class="showcase-card">
+          <div class="sc-label">Breach Status</div>
+          <div class="sc-val green">Clean</div>
+          <div class="sc-sub">Not in any breach DB</div>
+        </div>
+        <div class="showcase-card span2">
+          <div class="sc-label">Security Checklist</div>
+          <div class="sc-checklist">
+            <div class="sc-check"><span class="sc-check-icon pass">✓</span> Uppercase letters present</div>
+            <div class="sc-check"><span class="sc-check-icon pass">✓</span> Lowercase letters present</div>
+            <div class="sc-check"><span class="sc-check-icon pass">✓</span> Numbers included</div>
+            <div class="sc-check"><span class="sc-check-icon pass">✓</span> Special symbols included</div>
+            <div class="sc-check"><span class="sc-check-icon pass">✓</span> 12+ characters length</div>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-content">
+        <div class="section-eyebrow">Security Intelligence</div>
+        <h2 class="section-title">Not just a generator.<br/>A full security audit.</h2>
+        <p class="section-desc">Every password gets a complete analysis the moment it's generated — no extra clicks required.</p>
+        <div class="feature-list">
+          <div class="feature-row">
+            <div class="feature-row-icon">🧮</div>
+            <div class="feature-row-text">
+              <strong>Entropy Calculation</strong>
+              <span>Measures true randomness in bits — the mathematical measure of how unpredictable your password is.</span>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-row-icon">⚠️</div>
+            <div class="feature-row-text">
+              <strong>Risk Level Classification</strong>
+              <span>Instant High / Medium / Low risk rating based on complexity, length, and character diversity.</span>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-row-icon">🗄️</div>
+            <div class="feature-row-text">
+              <strong>Breach Database Check</strong>
+              <span>Cross-references against millions of known compromised passwords so you never reuse a leaked one.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MODES ─── -->
+<section id="modes" class="modes">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Generation Modes</div>
+      <h2 class="section-title">The right password<br/>for every situation</h2>
+      <p class="section-desc">Four distinct modes tuned for real-world use cases — from memorable personal passwords to maximum-entropy banking credentials.</p>
+    </div>
+    <div class="modes-grid reveal">
+      <div class="mode-card personal">
+        <div class="mode-icon">👤</div>
+        <div class="mode-name">Personal</div>
+        <p class="mode-desc">Easy to remember. Familiar patterns with just enough complexity for everyday accounts.</p>
+        <div class="mode-example">Example<span>Jimmy@2026</span></div>
+      </div>
+      <div class="mode-card professional">
+        <div class="mode-icon">💼</div>
+        <div class="mode-name">Professional</div>
+        <p class="mode-desc">Balanced complexity. Meets enterprise password policies without sacrificing usability.</p>
+        <div class="mode-example">Example<span>T#7Lp2@Qm9</span></div>
+      </div>
+      <div class="mode-card banking">
+        <div class="mode-icon">🏦</div>
+        <div class="mode-name">Banking</div>
+        <p class="mode-desc">Maximum entropy. Full character diversity, 16+ length, zero patterns. For financial accounts.</p>
+        <div class="mode-example">Example<span>R!8kL#4zW@7mP</span></div>
+      </div>
+      <div class="mode-card gaming">
+        <div class="mode-icon">🎮</div>
+        <div class="mode-name">Gaming</div>
+        <p class="mode-desc">Memorable and themed. Strong enough to protect your account, fun enough to actually remember.</p>
+        <div class="mode-example">Example<span>GhostHunter#77</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="reveal">
+      <h2 class="cta-title">Ready to lock<br/>everything down?</h2>
+      <p class="cta-sub">Start generating military-grade passwords for free. No account needed. No data stored without your permission.</p>
+      <div class="cta-actions">
+        <a href="studio.html" class="btn-primary btn-primary-lg">⚡ Open Password Studio</a>
+        <a href="register.html" class="btn-outline-lg">Create Free Account</a>
+      </div>
+      <div class="trust-badges">
+        <div class="trust-badge"><span class="trust-badge-icon">✓</span> No account required</div>
+        <div class="trust-badge"><span class="trust-badge-icon">✓</span> Nothing stored server-side</div>
+        <div class="trust-badge"><span class="trust-badge-icon">✓</span> Open source ready</div>
+        <div class="trust-badge"><span class="trust-badge-icon">✓</span> 100% free to use</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-left">
+    <div class="nav-logo-icon" style="width:28px;height:28px;font-size:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary),var(--accent2));border-radius:7px;">🛡️</div>
+    <span class="footer-copy">© 2026 VaultX Password Studio. Built by Rohan.</span>
+  </div>
+  <div class="footer-links">
+    <a href="#">Privacy</a>
+    <a href="#">Security</a>
+    <a href="#">GitHub</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
-
-<div class="bg-orb orb-1"></div>
-
-<div class="bg-orb orb-2"></div>
+</html>
